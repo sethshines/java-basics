@@ -1,5 +1,4 @@
 import oops.BankAccount;
-import oops.Person;
 
 public class Main {
     public static void main(String[] args) {
