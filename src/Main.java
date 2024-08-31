@@ -1,15 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import oops.BankAccount;
+import oops.Person;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+//        Person person = new Person();
+//        person.setName("Rahul Seth");
+//        person.setAge((byte) 31);
+//        person.setAddress("Ludhiana, Punjab, India");
+//        person.greet();
+        BankAccount b1 = new BankAccount(1);
+        b1.setName("Rahul Seth");
+        b1.setAge((byte) 34);
+        b1.setAddress("Ludhiana, Punjab, India");
+        b1.deposit(2000);
+        b1.withdraw(1000);
+        System.out.println("Account Id:" + b1.getAccountId());
+        System.out.println("Account Name" + b1.getName());
+        System.out.println("Balance:" + b1.getBalance());
+        BankAccount b2 = new BankAccount(2,5000);
+        b2.deposit(2000);
+        b2.withdraw(1000);
+        System.out.println("Account Id:" + b2.getAccountId());
+        System.out.println("Account Name" + b2.getName());
+        System.out.println("Balance:" + b2.getBalance());
     }
 }
