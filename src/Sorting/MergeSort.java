@@ -1,8 +1,6 @@
 package Sorting;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Objects;
 
 public class MergeSort {
@@ -14,7 +12,7 @@ public class MergeSort {
         arr.add(13);
         arr.add(16);
         arr.add(10);
-        System.out.println(mergeSort(arr).toString());
+        System.out.println(mergeSort(arr));
     }
 
     static ArrayList<Integer> mergeSort (ArrayList<Integer> arr) {
@@ -22,11 +20,11 @@ public class MergeSort {
             return arr;
         }
         int middle = arr.size() / 2;
-        return merge(mergeSort(new ArrayList<Integer>(arr.subList(0, middle))), mergeSort(new ArrayList<Integer>(arr.subList(middle, arr.size()))));
+        return merge(mergeSort(new ArrayList<>(arr.subList(0, middle))), mergeSort(new ArrayList<>(arr.subList(middle, arr.size()))));
     }
 
     static ArrayList<Integer> merge (ArrayList<Integer> left, ArrayList<Integer> right) {
-        ArrayList<Integer> mergedArr = new ArrayList<Integer>();
+        ArrayList<Integer> mergedArr = new ArrayList<>();
         // Instead of using 0 here we should manage with indexes.
         while(!left.isEmpty() && !right.isEmpty()){
             if(left.get(0) < right.get(0)) {
